@@ -1,0 +1,99 @@
+Trial 1
+Q1. Wilbur had a full stomach
+True
+False x
+
+Q2. The barn was quiet
+True
+False x
+
+Q3. Who did Wilbur hear upon waking a second time?
+The goose x
+The rat
+
+Q4. Wilbur woke many times
+True x
+False
+
+Q5. Wilbur was annoyed by Templeton
+True x
+False
+
+Q6. When does something usually stir in the barn?
+Dawn
+Midnight x
+
+Trial 2
+Q1. The goose had a lot on her mind
+True
+False x
+
+Q2. What time was it
+11
+11.30 x
+
+Q3. The goose always stayed with her eggs
+True
+False x
+
+Q4. Wilbur not relate to the goose
+True x
+False
+
+Q5. Wilbur heard a voice
+...upon waking
+...in his dreams x
+
+Q6. It usually takes a month for a goose egg to hatch
+True x
+False
+
+Trial 3
+Q1. Templeton was asleep in the barn
+True
+False x
+
+Q2. The barn was quiet
+True x
+False
+
+Q3. What swung back and forth?
+The barn door 
+The weather-vane x
+
+Q4. Wilbur felt impatient waiting for morning
+True
+False x
+
+Q5. Wilbur could see the goose
+True x
+False
+
+Q6. Wilbur could not see the lambs
+True
+False x
+
+Trial 4
+Q1. When Wilbur examined the window ledge, he found something new
+True
+False x
+
+Q2. Wilbur spoke
+Loudly x
+Quietly 
+
+Q3. The animals did not pay attention to Wilburs announcement
+True 
+False x
+
+Q4. Wilbur was embarrassed
+True x
+False
+
+Q5. Wilbur did not repeat himself
+True 
+False x
+
+Q6. Wilbur realised who had been speaking to him
+True
+False x

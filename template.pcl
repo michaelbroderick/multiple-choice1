@@ -1,0 +1,190 @@
+int num_qs_1 = 6;
+
+array<int> answers[num_qs_1];
+array<int> answers2[num_qs_1];
+array<int> correct_answers[num_qs_1] = {
+array<int> correct_answers2[num_qs_1] = {
+
+int num_locations = (num_qs_1)*4 + 1;
+
+array<int> location[num_locations][4];
+
+location[1] = { -20, 2, 256, 274 };
+location[2] = { -20, 2, 236, 254 };
+location[3] = { -20, 2, 216, 234 };
+location[4] = { -20, 2, 196, 214 };
+location[5] = { -20, 2, 136, 154 };
+location[6] = { -20, 2, 116, 134 };
+location[7] = { -20, 2, 96, 114 };
+location[8] = { -20, 2, 76, 94 };
+location[9] = { -20, 2, 16, 34 };
+location[10] = { -20, 2, -4, 14 };
+location[11] = { -20, 2, -24, -6 };
+location[12] = { -20, 2, -44, -26 };
+location[13] = { -20, 2, -104, -86 };
+location[14] = { -20, 2, -124, -106 };
+location[15] = { -20, 2, -144, -126 };
+location[16] = { -20, 2, -164, -146 };
+location[17] = { -20, 2, -224, -206 };
+location[18] = { -20, 2, -244, -226 };
+location[19] = { -20, 2, -264, -246 };
+location[20] = { -20, 2, -284, -266 };
+location[21] = { -20, 2, -344, -326 };
+location[22] = { -20, 2, -364, -346 };
+location[23] = { -20, 2, -384, -366 };
+location[24] = { -20, 2, -404, -386 };
+
+
+location[25] = { 540, 660, -20, 20 };
+
+location[3]={0,0,0,0};
+location[4]={0,0,0,0};
+location[7]={0,0,0,0};
+location[8]={0,0,0,0};
+location[11]={0,0,0,0};
+location[12]={0,0,0,0};
+location[15]={0,0,0,0};
+location[16]={0,0,0,0};
+location[19]={0,0,0,0};
+location[20]={0,0,0,0};
+location[23]={0,0,0,0};
+location[24]={0,0,0,0};
+
+mouse mse = response_manager.get_mouse( 1 );
+mse.set_xy( 0, 0 ); 
+
+sub
+	int get_selection
+begin
+	int x = mse.x();
+	int y = mse.y();
+	loop int i = 1; until i > num_locations begin
+		if ( (x >= location[i][1]) && (x <= location[i][2]) &&
+			(y >= location[i][3]) && (y <= location[i][4]) ) then
+			return i
+		end;
+		i = i + 1
+	end;
+	return 0
+end;
+
+begin
+	i=
+run_event.set_event_code( string(i) + "," + string(i) );
+run_event.set_port_code(100+i);
+run_trial.present();
+end;
+
+loop
+	bool ed = false;
+	int responses = response_manager.total_response_count();
+until
+	ed == true 
+begin
+
+	pic_1.set_part_x( 41, mse.x() );
+	pic_1.set_part_y( 41, mse.y() ); 
+	pic_1.present();
+	mse.poll();
+	if (response_manager.total_response_count() > responses) then
+		responses = response_manager.total_response_count();
+		int selection = get_selection();
+		if (selection == num_locations) then
+			#display_device.screenshot("C:\\Users\\elalor\\Documents\\Work\\Talks\\2010\\UCL\\screenshot_cocktailparty_questions.bmp");
+			ed = true;
+		elseif (selection > 0) then
+			answers[int(floor((double(selection-1)/4.0) + 1.0))] = mod(selection-1,4) + 1;
+			loop int i = 1 until i > 2 begin
+				pic_1.set_part(11 + 2*(int(floor(double(selection-1)/4.0))*2  + i ) + int(floor(double(selection-1)/4.0)), choice_button);
+				i = i+1;
+			end;
+			pic_1.set_part(11 + 2*(int(floor(double(selection-1)/4.0))*2 + mod(selection-1,4) + 1) + int(floor(double(selection-1)/4.0)), selected_button);
+		end
+	end
+end;
+
+int score_1 = 0;
+
+loop int i = 1 until i > num_qs_1 begin
+	if answers[i] == correct_answers[i] then
+		score_1 = score_1 + 1;
+	end;
+	i = i+1;
+end;
+
+decision_txt.set_caption("You scored " + string(score_1) + "/" + string(num_qs_1));
+decision_txt.redraw();
+decision_trial.present();
+
+
+
+loop
+	bool ed = false;
+	int responses = response_manager.total_response_count();
+until
+	ed == true 
+begin
+
+	pic_2.set_part_x( 41, mse.x() );
+	pic_2.set_part_y( 41, mse.y() ); 
+	pic_2.present();
+	mse.poll();
+	if (response_manager.total_response_count() > responses) then
+		responses = response_manager.total_response_count();
+		int selection = get_selection();
+		if (selection == num_locations) then
+			#display_device.screenshot("C:\\Users\\elalor\\Documents\\Work\\Talks\\2010\\UCL\\screenshot_cocktailparty_questions.bmp");
+			ed = true;
+		elseif (selection > 0) then
+			answers2[int(floor((double(selection-1)/4.0) + 1.0))] = mod(selection-1,4) + 1;
+			loop int i = 1 until i > 2 begin
+				pic_2.set_part(11 + 2*(int(floor(double(selection-1)/4.0))*2  + i ) + int(floor(double(selection-1)/4.0)), choice_button);
+				i = i+1;
+			end;
+			pic_2.set_part(11 + 2*(int(floor(double(selection-1)/4.0))*2 + mod(selection-1,4) + 1) + int(floor(double(selection-1)/4.0)), selected_button);
+		end
+	end
+end;
+
+int score_2 = 0;
+
+loop int i = 1 until i > num_qs_1 begin
+	if answers2[i] == correct_answers2[i] then
+		score_2 = score_2 + 1;
+	end;
+	i = i+1;
+end;
+
+decision_txt.set_caption("You scored " + string(score_2) + "/" + string(num_qs_1));
+decision_txt.redraw();
+decision_trial.present();
+
+# Write out the answers given by the subject & the correct answers
+
+output_file out = new output_file;
+
+out.open(logfile.subject() + "_answers_run_" + string(1) + ".txt");
+out.print("Correct answers story for 1\t");
+loop int i = 1 until i > num_qs_1 begin
+	out.print(correct_answers[i]);
+	i = i+1;
+end;
+out.print("\n");
+out.print("Subject answers story for 1\t");
+loop int i = 1 until i > num_qs_1 begin
+	out.print(answers[i]);
+	i = i+1;
+end;
+out.print("\n");
+out.print("Correct Words\t");
+loop int i = 1 until i > num_qs_1 begin
+	out.print(correct_answers2[i]);
+	i = i+1;
+end;
+out.print("\n");
+out.print("Subject answers\t");
+loop int i = 1 until i > num_qs_1 begin
+	out.print(answers2[i]);
+	i = i+1;
+end;
+out.close();

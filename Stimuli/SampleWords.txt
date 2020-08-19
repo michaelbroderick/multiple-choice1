@@ -1,0 +1,149 @@
+Trial 1
+Blackness
+Yes x
+No
+
+Crazy
+Yes x
+No
+
+Car
+Yes
+No x
+
+Hurt
+Yes
+No x
+
+Dozen
+Yes x
+No
+
+Paws
+Yes
+No x
+
+Trial 2
+Eleven
+Yes x
+No
+
+Whistled
+Yes
+No x
+
+Trouble
+Yes x
+No
+
+Afternoons
+Yes x
+No
+
+Round
+Yes
+No x
+
+Sticks
+Yes
+No x
+
+Trial 3
+Shivering
+Yes
+No x
+
+Stars
+Yes x
+No
+
+Gleam
+Yes x
+No
+
+Coil
+Yes
+No x
+
+Fire
+Yes
+No x
+
+Window
+Yes x
+No
+
+Trial 4
+Attention
+Yes x
+No
+
+Shoulder
+Yes
+No x
+
+Blushed
+Yes x
+No
+
+Kicked
+Yes
+No x
+
+Ledge
+Yes x
+No
+
+Tractor
+Yes
+No x
+
+Trial 5 
+Incorrect
+Yes
+No x
+
+Manure
+Yes x
+No
+
+Breakfast
+Yes x
+No
+
+Gander
+Yes x
+No
+
+Whispered
+Yes x
+No
+
+Opened
+Yes
+No x
+
+Trial 6
+Please
+Yes x
+No
+
+Gigantic
+Yes
+No x
+
+Morning 
+Yes x
+No
+
+Fright
+Yes
+No x
+
+Flowers
+Yes
+No x
+
+Apple
+Yes
+No x
